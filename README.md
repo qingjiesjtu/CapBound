@@ -1,6 +1,6 @@
 # On the Self-awareness of Large Reasoning Models' Capability Boundaries
 
-This is the code repository of our anonymous submission: On the Self-awareness of Large Reasoning Models' Capability Boundaries
+This is the code repository of our work: On the Self-awareness of Large Reasoning Models' Capability Boundaries
 
 This repository contains the code to:
 1. Extract last token hidden states for input questions.
