@@ -1,4 +1,4 @@
-# On the Self-awareness of Large Reasoning Models' Capability Boundaries
+# Stop Before You Fail: Operational Capability Boundaries for Mitigating Unproductive Reasoning in Large Reasoning Models
 
 This is the code repository of our work: On the Self-awareness of Large Reasoning Models' Capability Boundaries
 
@@ -8,7 +8,7 @@ This repository contains the code to:
 3. Optimize reasoning with self-awareness prompt suffix and output prefix.
 
 ## Abstract
-Large Reasoning Models (LRMs) have shown impressive performance on complex reasoning tasks such as mathematics, yet they also display misbehaviors that expose their limitations. In particular, when faced with hard questions, LRMs often engage in unproductive reasoning until context limit, producing wrong answers while wasting substantial computation. This phenomenon reflects a fundamental issue: current answering paradigms overlook the relationship between questions and LRMs' capability boundaries. In this paper, we investigate whether LRMs possess self-awareness of capability boundaries. We begin by an observation that LRMs may know what they cannot solve through expressed reasoning confidence. For black-box models, we find that reasoning expressions reveal boundary signals, with accelerated growing confidence trajectory for solvable problems but convergent uncertainty trajectory for unsolvable ones. For white-box models, we show that hidden states of the last input token encode boundary information, with solvable and unsolvable problems linearly separable even before reasoning begins. Building on these findings, we propose two simple yet effective optimization strategies: reasoning expression monitoring and hidden states monitoring. Experiments demonstrate that these boundary-aware strategies enable LRMs to avoid unproductive reasoning without sacrificing accuracy, significantly improving reliability and efficiency by cutting token usage up to 62.7 – 93.6%.
+Current answering paradigms for Large Reasoning Models (LRMs) often fail to account for the fact that some questions may lie beyond the model’s operational capability boundary, leading to long but unproductive reasoning. In this paper, we study whether LRMs expose early signals predictive of such cases, and whether these signals can be used to mitigate unproductive reasoning. In black-box settings, we find that reasoning expressions contain failure-predictive signals. In white-box settings, we show that the hidden states of the last input token contain information that is predictive of whether a question will not be solved correctly under our evaluation setup. Building on these observations, we propose two test-time monitoring strategies: reasoning expression monitoring and hidden states monitoring, that reduce token usage by 62.7–93.6%, substantially improving efficiency and reliability while largely preserving accuracy.
 
 <p align="center">
   <img src="overview.png" width="800">
