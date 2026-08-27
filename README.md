@@ -1,6 +1,6 @@
 # Stop Before You Fail: Operational Capability Boundaries for Mitigating Unproductive Reasoning in Large Reasoning Models
 
-This is the code repository of our work: On the Self-awareness of Large Reasoning Models' Capability Boundaries
+This is the code repository of our work accepted by EMNLP 2026 Main Conference.
 
 This repository contains the code to:
 1. Extract last token hidden states for input questions.
